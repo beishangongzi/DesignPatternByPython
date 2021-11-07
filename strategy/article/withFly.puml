@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/class-diagram
+class Duck
+class mallardDuck
+class ReadHeadDuck
+class ModelDuck
+
+
+
+
+
+Duck <|-- mallardDuck
+Duck <|-- ReadHeadDuck
+Duck <|-- ModelDuck
+
+class Duck{
+quack()
+swim()
+display()
+fly()
+}
+
+@enduml

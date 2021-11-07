@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface FlyBehavior{
+    fly()
+}
+class WithWings{
+    fly()
+}
+class FlyNoWay{
+    fly()
+}
+FlyBehavior <|.. FlyNoWay
+FlyBehavior <|.. WithWings
+
+class Duck
+class mallardDuck
+class ReadHeadDuck
+class RubberDuck
+Duck <|-- mallardDuck
+Duck <|-- ReadHeadDuck
+Duck <|-- RubberDuck
+
+class Duck{
+flyBehavior: FlyBehavior
+quack()
+swim()
+display()
+}
+
+Duck *.. FlyBehavior
+
+
+@enduml

@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+
+
+class Duck{
+quack()
+swim()
+display()
+}
+
+interface Flyable{
+    fly()
+}
+
+class MallardDuck{
+    display()
+    fly()
+}
+
+class RedHeadDuck{
+    display()
+    fly()
+}
+
+
+class RubberDuck{
+    display()
+    fly()
+}
+
+
+RedHeadDuck --|> Duck
+MallardDuck --|> Duck
+RubberDuck --|> Duck
+
+RedHeadDuck ..|> Flyable
+MallardDuck ..|> Flyable
+RubberDuck ..|> Flyable
+
+@enduml
